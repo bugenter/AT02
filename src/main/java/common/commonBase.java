@@ -13,7 +13,8 @@ public class commonBase {
 	public static void typeText(WebElement element, String a){
 		if (a != null)
 		{
-			element.sendKeys(a);
+			CharSequence cs = a;
+			element.sendKeys(cs);
 		}
 	}
 
