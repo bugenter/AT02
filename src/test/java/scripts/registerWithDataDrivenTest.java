@@ -12,7 +12,7 @@ import common.registerPage;
 import datadriven.ExcelUtils;
 
 public class registerWithDataDrivenTest {
-	String Path_TestData = "/home/phuong_dt/working/project/AT02/src/test/java/resources/";
+	String Path_TestData = System.getProperty("user.dir")+"/src/test/java/resources/";
 	String File_TestData = "TestData.xls";
 	String sheetName="Sheet1";
 	WebDriver dr ;
