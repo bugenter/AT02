@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Example" verbose="1">
+    <test name="Example">
+        <classes>
+            <class name="scripts.registerWithDataDrivenTest"/>
+        </classes>
+        <groups>
+            <run>
+                <exclude name="datadriven"/>
+            </run>
+        </groups>
+    </test>
+</suite>
