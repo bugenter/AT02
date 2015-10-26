@@ -52,7 +52,7 @@ public class registerPage extends commonBase {
 	 * Verify register
 	 * @param isSuccess
 	 */
-	public  void verifyRegister(Boolean isSuccess){
+	public  void verifyRegister(boolean isSuccess){
 		if(isSuccess){
 			driver.findElement(ELEMENT_TEXT_REGISTER_SUCESS);
 		}

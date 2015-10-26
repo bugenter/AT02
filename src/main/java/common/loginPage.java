@@ -48,7 +48,7 @@ public class loginPage extends commonBase {
 	 * verify login
 	 * @param isSuccess
 	 */
-	public  void verifyLogin(Boolean isSuccess){
+	public  void verifyLogin(boolean isSuccess){
 		if(isSuccess){
 			driver.findElement(ELEMENT_ACCOUNT);
 			driver.findElement(ELEMENT_LOGOUT);
