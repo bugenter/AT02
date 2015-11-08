@@ -15,17 +15,10 @@ public class loginPage extends commonBase {
 	public static By ELEMENT_LOGIN_PASS = By.id("pass");
 	public static By ELEMENT_NAME_DARDBOARD = By.xpath(".//*[contains(text(),'Hello, phuong nguyen')]");
 
-	/**
-	 * construction
-	 * @param dr
-	 */
 	public loginPage(WebDriver dr){
 		driver = dr;
 	}
 
-	/**
-	 * go to login page
-	 */
 	public void gotoLogin()
 	{
 		driver.findElement(ELEMENT_ACCOUNT).click();
@@ -33,22 +26,13 @@ public class loginPage extends commonBase {
 
 	}
 
-	/**
-	 * input valua to login form
-	 * @param email
-	 * @param pass
-	 */
 	public void inputLogin(String email, String pass){
 		typeText(driver.findElement(ELEMENT_LOGIN_EMAIL),email);
 		typeText(driver.findElement(ELEMENT_LOGIN_PASS),pass);
 		driver.findElement(ELEMENT_BUTTON_LOGIN).click();		
 	}
 
-	/**
-	 * verify login
-	 * @param isSuccess
-	 */
-	public  void verifyLogin(boolean isSuccess){
+	public  void verifyLogin(Boolean isSuccess){
 		if(isSuccess){
 			driver.findElement(ELEMENT_ACCOUNT);
 			driver.findElement(ELEMENT_LOGOUT);
@@ -58,4 +42,8 @@ public class loginPage extends commonBase {
 			driver.findElement(ELEMENT_BUTTON_LOGIN);
 		}
 	}
+
+
+
+
 }

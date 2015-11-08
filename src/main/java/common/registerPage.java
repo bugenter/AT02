@@ -31,14 +31,6 @@ public class registerPage extends commonBase {
 		driver.findElement(ELEMENT_REGISTER).click();
 	}
 
-	/**
-	 * input value to register page
-	 * @param f_name
-	 * @param l_name
-	 * @param email
-	 * @param pass
-	 * @param confirm_pass
-	 */
 	public  void inputRegister(String f_name, String l_name, String email, String pass, String confirm_pass) {
 		typeText(driver.findElement(ELEMENT_F_NAME),f_name);
 		typeText(driver.findElement(ELEMENT_L_NAME),l_name);
@@ -52,7 +44,7 @@ public class registerPage extends commonBase {
 	 * Verify register
 	 * @param isSuccess
 	 */
-	public  void verifyRegister(boolean isSuccess){
+	public  void verifyRegister(Boolean isSuccess){
 		if(isSuccess){
 			driver.findElement(ELEMENT_TEXT_REGISTER_SUCESS);
 		}
@@ -61,4 +53,6 @@ public class registerPage extends commonBase {
 			driver.findElement(ELEMENT_TEXT_REGISTER_FAIL);
 		}
 	}
+
+
 }
