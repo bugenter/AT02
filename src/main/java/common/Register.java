@@ -7,7 +7,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Register {
-	LoginPage login;
+	LoginPage login = new LoginPage();
 	protected  WebDriver driver;
 	protected  WebDriverWait wait;
 	public  By E_REGISTER_LINK = By.xpath(".//*[text()='Register']");
