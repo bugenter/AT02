@@ -1,5 +1,7 @@
 package scripts;
 
+import java.io.File;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -7,6 +9,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+
 import common.homePage;
 import common.loginPage;
 import datadriven.Constant;
@@ -17,6 +20,8 @@ public class loginTest {
 	WebDriver dr ;
 	homePage home;
 	loginPage log;
+	String path;
+	
 
 	@BeforeMethod(groups={"testlogin"})
 	public void before(){
@@ -25,11 +30,12 @@ public class loginTest {
 		log = new loginPage(dr);
 		home.openHomepage();
 		log.gotoLogin();
+	 path = (System.getProperty("user.dir")+"/src/test/java/resources/").replace("/", File.separator).replace("\\", File.separator);
 	}
 
 	@Test(groups={"testlogin"})
 	public void testLogin() throws Exception{
-		ExcelUtils.setExcelFile(Constant.Path_TestData + Constant.File_TestData,Constant.sheetName);
+		ExcelUtils.setExcelFile(path + Constant.File_TestData,Constant.sheetName);
 		String email= ExcelUtils.getCellData(2, 2);
 		String pass= ExcelUtils.getCellData(2, 3);
 		log.inputLogin(email, pass);
