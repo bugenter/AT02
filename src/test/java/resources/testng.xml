@@ -3,8 +3,9 @@
     <test name="Example">
         <classes>
             
-            <class name="suiteTest.loginTest"/>
-            <class name="suiteTest.registerTest"/>
+           
+            <class name="scripts.loginTest"/>
+            <class name="scripts.registerTest"/>
         </classes>
         <groups>
             <run>

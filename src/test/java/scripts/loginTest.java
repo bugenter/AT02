@@ -34,17 +34,17 @@ public class loginTest {
 		String pass= ExcelUtils.getCellData(2, 3);
 		log.inputLogin(email, pass);
 
-		dr.findElement(By.xpath(".//a/*[text()='Account']")).click();
-		dr.findElement(By.xpath(".//*[@id='header-account']//*[contains(text(),'My Cart')]")).click();
-		WebElement e = dr.findElement(By.id("empty_cart_button"));
-		if (e!=null)
-			e.click();
+		//		dr.findElement(By.xpath(".//a/*[text()='Account']")).click();
+		//		dr.findElement(By.xpath(".//*[@id='header-account']//*[contains(text(),'My Cart')]")).click();
+		//		WebElement e = dr.findElement(By.id("empty_cart_button"));
+		//		if (e!=null)
+		//			e.click();
 	}
 
 	@AfterMethod(groups={"testlogin"})
 	public void after(){
-		//		home.logOut();
-		//home.closeBrowser();
+		home.logOut();
+		home.closeBrowser();
 	}
 
 
