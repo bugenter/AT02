@@ -2,11 +2,14 @@
 <suite name="Example" verbose="1">
     <test name="Example">
         <classes>
-            <class name="scripts.registerWithDataDrivenTest"/>
+            
+            <class name="suiteTest.loginTest"/>
+            <class name="suiteTest.registerTest"/>
         </classes>
         <groups>
             <run>
-                <exclude name="datadriven"/>
+               
+                <include name="testlogin"/>
             </run>
         </groups>
     </test>
